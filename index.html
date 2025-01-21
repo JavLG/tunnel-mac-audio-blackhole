@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mac Audio Stream</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .controls {
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mac Audio Stream</h1>
+    <div class="controls">
+        <audio id="audioPlayer" controls>
+            <source src="/stream" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <script>
+        const audio = document.getElementById('audioPlayer');
+        
+        audio.addEventListener('error', (e) => {
+            console.error('Audio error:', e);
+            // Attempt to reconnect after error
+            setTimeout(() => {
+                audio.load();
+                audio.play();
+            }, 2000);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "name": "stream-pc-audio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cloudflared": "^0.6.0",
+    "express": "^4.21.2",
+    "music-metadata": "^10.7.0",
+    "socket.io": "^4.8.1",
+    "throttle": "^1.0.3"
+  }
+}
